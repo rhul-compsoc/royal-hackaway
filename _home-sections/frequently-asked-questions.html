@@ -2,12 +2,14 @@
     <div class="container text-center">
         <h2><b>Frequently Asked Questions</b></h2>
         <p>Answers to some questions we get a lot!</p>
-        <div class="row">
+        <div class="row faq-questions">
             {% for event in site.frequently-asked-questions %}
-            <div class="col-12 col-md-6">
-                <button class="btn btn-primary" style="width: 100%" type="button" data-toggle="collapse"
-                    data-target="#{{ event.slug }}" aria-expanded="false" aria-controls="{{ event.slug }}">
-                    <span>{{ event.name }}</span>
+            <div class="col-12 col-md-6 faq-question">
+                <button class="btn btn-primary faq-question-button" style="width: 100%" type="button"
+                    data-toggle="collapse" data-target="#{{ event.slug }}" aria-expanded="false"
+                    aria-controls="{{ event.slug }}">
+                    <span class="faq-question-button-text">{{ event.name }}</span>
+                    <i class="icon-down-open"></i>
                 </button>
                 <div class="collapse multi-collapse" id="{{ event.slug }}">
                     <div class="card card-body text-dark">

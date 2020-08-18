@@ -54,11 +54,26 @@ section > .container {
 }
 
 section#frequently-asked-questions {
-
   background-color: #f48b22;
   box-shadow: 0 10px #d3791f;
   margin-bottom:5%;
   color: #FFFFFF;
+
+  .faq-questions {
+    .faq-question {
+      margin-bottom: 1em;
+
+      .faq-question-button {
+        display: grid;
+        white-space: normal;
+        grid-template-columns: 1fr auto;
+
+        .faq-question-button-text {
+          text-align: left;
+        }
+      }
+    }
+  }
 }
 
 .card > a {

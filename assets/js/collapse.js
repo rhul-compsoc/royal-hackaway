@@ -19,7 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
           if (toggleStatus) {
             // Expand!
-            const futureHeight = 86
+            targetElement.style.display = 'block'
+            const futureHeight = targetElement.clientHeight
+            targetElement.style.display = null
 
             requestAnimationFrame(() => {
               targetElement.classList.add('collapsing')
@@ -32,16 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
               targetElement.classList.add('collapse', 'show')
               targetElement.classList.remove('collapsing')
+              targetElement.style.height = null;
               processing = false
             }, DELAY)
           } else {
             // Unexpand!
-            targetElement.classList.add('collapsing')
-            targetElement.classList.remove('show', 'collapse')
 
+            // Get the current height being displayed in the web browser
+            targetElement.style.height = `${targetElement.clientHeight}px`
+
+            // Get CSS to 
             requestAnimationFrame(() => {
-              targetElement.style.height = null
+              targetElement.classList.add('collapsing')
+              targetElement.classList.remove('show', 'collapse')
+              requestAnimationFrame(() => {
+                targetElement.style.height = null
+              })
             })
+
 
             setTimeout(() => {
               targetElement.classList.add('collapse')
