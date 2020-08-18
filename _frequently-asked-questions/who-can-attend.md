@@ -2,4 +2,4 @@
 name: Who can attend?
 ---
 
-A hackathon is not a lorem ipsum.
+Anyone 18+ who is either a current university student or has graduated in the past six months.
