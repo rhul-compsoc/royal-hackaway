@@ -21,7 +21,7 @@ title: Event
         <p class="lead">{{ page.short-description}}</p>
 
         {% if page.show-ticket-button %}
-          <a class="btn btn-primary btn-lg btn-text-light {% if page.disable-button %}  disabled {% endif %}" href="{{ page.tickets }}" >
+          <a class="btn btn-primary btn-lg btn-text-dark {% if page.disable-button %}  disabled {% endif %}" href="{{ page.tickets }}" >
             {{ page.ticket-button-text }}
           </a>
         {% endif %}
@@ -65,5 +65,5 @@ title: Event
 
 <section id="get-in-touch" class="container text-center">
   <p> Questions, queries or qualms about this event? </p>
-  <a class="btn btn-primary text-light" href="mailto:{{ site.email }}">Get in touch</a>
+  <a class="btn btn-primary text-dark" href="mailto:{{ site.email }}">Get in touch</a>
 </section>
