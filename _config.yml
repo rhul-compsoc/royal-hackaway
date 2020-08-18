@@ -38,7 +38,8 @@ collections:
   events:
     output: true
     permalink: /:slug
-
+  frequently-asked-questions:
+    output: false
 
 sass:
   style: compressed
