@@ -11,10 +11,15 @@
   .coming-soon-container {
     display: grid;
     gap: 2em;
-    grid-template-columns: auto auto;
+    grid-template-areas: "logo content";
+
+    @media screen and (max-width: $mobile-width) {
+      grid-template-areas: "logo" "content";
+    }
 
     .coming-soon-logo {
       display: flex;
+      grid-area: logo;
       
       img {
         height: 100px;
@@ -23,6 +28,7 @@
       }
     }
     .coming-soon-content {
+      grid-area: content;
       .coming-soon-title {
         text-transform: uppercase;
         font-weight: bold;
