@@ -1,7 +1,33 @@
+@import '_config';
+
 ._home-sections.coming-soon {
   display: grid;
-  background-color: lightcyan;
+  background-color: $primary-background-colour;
+  color: $primary-foreground-colour;
   height: 100%;
   align-content: center;
   justify-content: center;
+
+  .coming-soon-container {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: auto auto;
+
+    .coming-soon-logo {
+      display: flex;
+      
+      img {
+        height: 100px;
+        align-self: center;
+        justify-self: center;
+      }
+    }
+    .coming-soon-content {
+      .coming-soon-title {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+  }
 }

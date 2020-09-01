@@ -1,7 +1,18 @@
 <div class="_home-sections coming-soon">
   <div class="container">
-    <h1>Royal Hackaway</h1>
-    <h2>February 2020</h2>
-    <p>More information coming soon!</p>
+    <div class="coming-soon-container">
+      <div class="coming-soon-logo">
+        <img src="/assets/images/rh-small-light.svg">
+      </div>
+      <div class="coming-soon-content">
+        {% assign sorted_events = site.events | where: "is-public",true | sort: "start","last" %}
+        
+        <h1 class="coming-soon-title">{{ sorted_events.last.name }}</h1>
+        <h2>{{ sorted_events.last.start | date: '%d %B %Y' }}</h2>
+        <p>More information coming soon!</p>
+        <a class="btn btn-outline-light" href="#">Get Updates</a>
+        <a class="btn btn-outline-light" href="#">Sponsor Us</a>
+      </div>
+    </div>
   </div>
 </div>
