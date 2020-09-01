@@ -34,6 +34,13 @@
         font-weight: bold;
         margin: 0;
       }
+
+      .coming-soon-buttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+      }
     }
   }
 }
