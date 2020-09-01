@@ -1,6 +1,12 @@
+#top {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+}
 
 main {
-  padding-top: 3%;
+  grid-area: main
 }
 
 .spaced {

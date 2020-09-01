@@ -1,3 +1,8 @@
+#header {
+  // Don't want a fixed header? Uncomment the "grid-area" line and remove "fixed-top" in the className of `_includes/header.html`
+  // grid-area: header;
+}
+
 .navbar-brand > img {
   height: 4vh;
 }
