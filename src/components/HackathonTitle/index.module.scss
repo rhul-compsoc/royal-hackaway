@@ -1,6 +1,6 @@
 @import '_config';
 
-.comingSoon {
+.hackathonTitle {
   height: 100%;
   flex-grow: 1;
 
@@ -10,17 +10,18 @@
   align-content: center;
   justify-content: center;
 
-  .comingSoonContainer {
+  .hackathonTitleContainer {
     display: grid;
     gap: 2em;
     padding: 1em;
     grid-template-areas: "logo content";
+    max-width: 45%;
 
     @media screen and (max-width: $mobile-width) {
       grid-template-areas: "logo" "content";
     }
 
-    .comingSoonLogo {
+    .hackathonTitleLogo {
       display: flex;
       grid-area: logo;
       
@@ -30,15 +31,15 @@
         justify-self: center;
       }
     }
-    .comingSoonContent {
+    .hackathonTitleContent {
       grid-area: content;
-      .comingSoonTitle {
+      .hackathonTitleTitle {
         text-transform: uppercase;
         font-weight: bold;
         margin: 0;
       }
 
-      .comingSoonButtons {
+      .hackathonTitleButtons {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

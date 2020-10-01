@@ -1,70 +1,24 @@
 import React, { Component } from "react"
 import styles from "./index.module.scss"
-import smallLogo from "../../assets/images/logo/rh-small-light.svg"
 import { CombineStyles } from "../../helpers/CombineStyles"
-import sponsorHandout from "../../assets/pdf/sponsorhandout.pdf"
-import { graphql, StaticQuery } from "gatsby"
+import image from './image.svg';
 
-class ComingSoon extends Component {
+
+class HackathonTitle extends Component {
   render() {
     return (
-      <section className={CombineStyles(styles.comingSoon)}>
-        <div className={styles.comingSoonContainer}>
-          <div className={styles.comingSoonLogo}>
-            <img src={smallLogo} alt="Royal Hackaway Logo" />
+      <section className={CombineStyles(styles.hackathonTitle)}>
+        <div className="row justify-content-center py-5">
+          <div className="col-3 text-left py-5">
+            <div>
+              <h1 className="py-2">Create something awesome</h1>
+              <p className="py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et auctor neque, id ornare nibh. Aliquam id velit aliquet, tristique ligula sit amet, dictum mauris. </p>
+              <p>Puis condimentum tristique libero, ac imperdiet mauris vulputate ut. Pellentesque tellus sem, hendrerit vel orci vitae, euismod lobortis lectus. Quisque odio mi, faucibus at neque blandit, aliquam tincidunt sapien.</p>
+              </div>
           </div>
-          <div className={styles.comingSoonContent}>
-            <StaticQuery
-              query={graphql`
-                {
-                  allMarkdownRemark(
-                    filter: {
-                      fields: { template: { eq: "events" } }
-                      frontmatter: { is_public: { eq: true } }
-                    }
-                    sort: { fields: frontmatter___start, order: DESC }
-                    limit: 1
-                  ) {
-                    nodes {
-                      frontmatter {
-                        name
-                        start
-                      }
-                    }
-                  }
-                }
-              `}
-              render={data => {
-                const latest = data.allMarkdownRemark.nodes[0]?.frontmatter
-                const date = new Date(latest.start).toLocaleDateString(
-                  undefined,
-                  {
-                    year: "numeric",
-                    month: "long",
-                    day: "2-digit",
-                  }
-                )
-
-                if (!latest) return null
-
-                return (
-                  <>
-                    <h1 className={styles.comingSoonTitle}>{latest.name}</h1>
-                    <h2>{date}</h2>
-                  </>
-                )
-              }}
-            />
-            <p>More information coming soon!</p>
-            <div className={styles.comingSoonButtons}>
-              {/*
-              <a className="btn btn-outline-light" href="https://">
-                Get Updates
-              </a>
-              */}
-              <a className="btn btn-hackaway-white" href={sponsorHandout}>
-                Sponsor Us
-              </a>
+          <div className="col-3">
+            <div className="mx-auto">
+              <img src={image} alt="coder" />
             </div>
           </div>
         </div>
@@ -73,4 +27,4 @@ class ComingSoon extends Component {
   }
 }
 
-export { ComingSoon }
+export { HackathonTitle }
