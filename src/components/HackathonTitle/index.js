@@ -8,7 +8,7 @@ class HackathonTitle extends Component {
     return (
       <section className={CombineStyles(styles.hackathonTitle)}>
         <div className="row justify-content-center py-5">
-          <div className="col-3 text-left py-5">
+          <div className="col-12 col-xs-12 col-sm-8 col-lg-4 col-xl-4 text-left py-5">
             <div>
               <h1 className="py-2">Create something awesome</h1>
               <p className="py-2">
@@ -22,15 +22,11 @@ class HackathonTitle extends Component {
                 lobortis lectus. Quisque odio mi, faucibus at neque blandit,
                 aliquam tincidunt sapien.
               </p>
-              <a className="btn btn-hackaway-white px-4 m-2">
-                Get a Ticket
-              </a>
-              <a className="btn btn-hackaway-white px-4 m-2">
-                Sponsor Us
-              </a>
+              <a className="btn btn-hackaway-white px-4 m-2">Get a Ticket</a>
+              <a className="btn btn-hackaway-white px-4 m-2">Sponsor Us</a>
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-auto d-none d-lg-flex d-xl-flex align-self-center">
             <div className="mx-auto image">
               <img className="image" src={image} alt="coder" />
             </div>
