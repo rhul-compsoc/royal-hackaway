@@ -22,11 +22,17 @@ class HackathonTitle extends Component {
                 lobortis lectus. Quisque odio mi, faucibus at neque blandit,
                 aliquam tincidunt sapien.
               </p>
+              <a className="btn btn-hackaway-white px-4 m-2">
+                Get a Ticket
+              </a>
+              <a className="btn btn-hackaway-white px-4 m-2">
+                Sponsor Us
+              </a>
             </div>
           </div>
           <div className="col-3">
-            <div className="mx-auto">
-              <img src={image} alt="coder" />
+            <div className="mx-auto image">
+              <img className="image" src={image} alt="coder" />
             </div>
           </div>
         </div>
