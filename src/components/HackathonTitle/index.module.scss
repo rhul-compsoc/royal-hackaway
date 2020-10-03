@@ -1,56 +1,17 @@
+@import '~bootstrap/scss/bootstrap.scss';
 @import '_config';
 
-.image {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 10px;
-}
-
 .hackathonTitle {
-  height: 100%;
-  flex-grow: 1;
-
-  display: grid;
   background: $jumbotron-background-gradient;
   color: $jumbotron-foreground-colour;
-  align-content: center;
-  justify-content: center;
+}
 
-  .hackathonTitleContainer {
+.buttons {
+  display: flex;
+  gap: 1em;
+  
+  @include media-breakpoint-down(xs) {
     display: grid;
-    gap: 2em;
-    padding: 1em;
-    grid-template-areas: "logo content";
-    max-width: 45%;
-
-    @media screen and (max-width: $mobile-width) {
-      grid-template-areas: "logo" "content";
-    }
-
-    .hackathonTitleLogo {
-      display: flex;
-      grid-area: logo;
-      
-      img {
-        height: 100px;
-        align-self: center;
-        justify-self: center;
-      }
-    }
-    .hackathonTitleContent {
-      grid-area: content;
-      .hackathonTitleTitle {
-        text-transform: uppercase;
-        font-weight: bold;
-        margin: 0;
-      }
-
-      .hackathonTitleButtons {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1em;
-      }
-    }
+    grid-template-columns: 1fr 1fr;
   }
 }

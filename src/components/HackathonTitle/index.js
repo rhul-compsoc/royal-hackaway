@@ -22,8 +22,10 @@ class HackathonTitle extends Component {
                 lobortis lectus. Quisque odio mi, faucibus at neque blandit,
                 aliquam tincidunt sapien.
               </p>
-              <a className="btn btn-hackaway-white px-4 m-2">Get a Ticket</a>
-              <a className="btn btn-hackaway-white px-4 m-2">Sponsor Us</a>
+            </div>
+            <div className={styles.buttons}>
+              <a className="btn btn-hackaway-white px-4">Get a Ticket</a>
+              <a className="btn btn-hackaway-white px-4">Sponsor Us</a>
             </div>
           </div>
           <div className="col-auto d-none d-lg-flex d-xl-flex align-self-center">
